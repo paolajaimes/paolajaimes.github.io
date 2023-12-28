@@ -62,6 +62,25 @@ body, html {
     border-top: none;
 }
 
+/* Adjusting the content width */
+.content {
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 20px;
+    max-width: 800px; /* Adjust as necessary for your desired width */
+}
+
+/* Adjusting the sidebar width and content */
+.sidebar {
+    width: 250px; /* Adjust if you want a narrower sidebar */
+    /* ... other styles ... */
+}
+
+/* Adjusting the navbar to not span the full width */
+.navbar {
+    /* ... other styles ... */
+    max-width: 800px; /* Match the max-width of .content */
+}
+
 /* Style the icons with Font Awesome */
 .fas, .fab {
     margin-right: 10px;
