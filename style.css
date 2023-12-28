@@ -8,7 +8,7 @@ body, html {
 .navbar {
     background-color: #eaeaea; /* Light grey background */
     overflow: hidden;
-    width: 100%; /* Navbar spans the full width */
+    padding-left: 2cm; /* Space from the left edge */
 }
 
 .navbar a {
@@ -16,56 +16,71 @@ body, html {
     display: block;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 20px;
     text-decoration: none;
     transition: 0.3s;
+    font-size: 1.1em; /* Bigger font size for navigation */
+}
+
+.navbar a:first-child {
+    font-size: 1.3em; /* Your name is a bit bigger */
+    margin-right: 1cm; /* More space after your name */
 }
 
 .navbar a:hover {
     background-color: #ddd;
 }
 
-.content {
-    display: flex;
-    justify-content: center; /* Center the content */
-    flex-direction: column;
-    align-items: center;
+.sidebar {
+    background-color: #fff; /* White background for the sidebar */
+    width: 250px; /* Sidebar width */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: auto;
+    padding-top: 60px; /* Space from the top */
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 150px; /* Size of the profile picture */
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.main-content {
+    margin-left: 250px; /* Same as sidebar width */
     padding: 20px;
 }
 
 .tab-content {
     display: none;
-    width: 80%; /* Adjust width to control the content area */
-    max-width: 800px; /* Adjust the maximum width as necessary */
+    padding: 20px;
     margin-top: 20px; /* Space from the navbar */
-}
-
-.profile-picture {
-    border-radius: 50%;
-    width: 200px; /* Increased size */
-    height: 200px; /* Keep the aspect ratio */
-    object-fit: cover;
-    border: 3px solid #333;
-    margin-top: 20px; /* Space from the top */
 }
 
 /* Style the icons with Font Awesome */
 .fas, .fab {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 @media screen and (max-width: 768px) {
-    .navbar a {
-        float: none;
-        display: block;
-        text-align: left;
+    .navbar {
+        padding-left: 0; /* Remove padding on smaller screens */
     }
 
-    .content {
-        padding: 0;
-    }
-
-    .tab-content {
+    .sidebar, .main-content {
         width: 100%;
+        margin-left: 0;
+    }
+
+    .sidebar {
+        padding-top: 0;
     }
 }
