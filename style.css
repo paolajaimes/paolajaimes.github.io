@@ -6,33 +6,19 @@ body, html {
 }
 
 .navbar {
-    background-color: #eaeaea;
+    background-color: #f9f9f9; /* Very light grey */
     overflow: hidden;
-    position: fixed; /* Keep navbar at the top */
+    position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000; /* Ensure navbar stays on top of other content */
+    border-bottom: 1px solid #eaeaea; /* Slightly darker line for division */
+    z-index: 1000;
 }
 
-.name-link {
-    margin-left: 2cm; /* Space for Paola Jaimes from the left */
-    font-size: 1.4em;
-}
-
-.navbar a {
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: 0.3s;
+.nav-link {
+    margin-right: 2cm; /* Space between navbar items */
     font-size: 1.2em;
-}
-
-.cv-link {
-    margin-left: auto; /* Push CV to the right */
-    margin-right: 2cm; /* Space from the right edge */
+    float: right; /* Align to the right */
 }
 
 .navbar a:hover {
@@ -41,53 +27,75 @@ body, html {
 
 .sidebar {
     background-color: #fff;
-    width: 250px; /* Adjust width as necessary */
+    width: 250px;
     position: fixed;
-    top: 60px; /* Adjust so it doesn't overlap with the navbar */
-    left: 2cm; /* Space from the left edge */
-    height: calc(100% - 60px); /* Subtract the navbar height */
+    top: 60px;
+    left: 2cm;
+    height: calc(100% - 60px);
     overflow: auto;
+    padding-top: 20px;
 }
 
 .profile img {
     border-radius: 50%;
-    width: 180px; /* Larger profile picture */
+    width: 180px;
     height: 180px;
     object-fit: cover;
-    margin: 20px auto; /* Centered in the sidebar */
+    margin: 20px auto;
+}
+
+.profile h1, .profile p, .profile a {
+    color: #333; /* Dark grey color */
+    text-align: center;
+}
+
+.profile a {
+    color: #333; /* Dark grey color for links */
+    text-decoration: none;
 }
 
 .main-content {
-    margin-left: 250px; /* Same as sidebar width */
-    padding-top: 60px; /* Push content down below the navbar */
+    margin-left: 250px;
+    padding-top: 60px;
+    padding-left: 2cm; /* Space from the sidebar */
+    padding-right: 2cm; /* Space from the right edge */
 }
 
 .tab-content {
     display: none;
-    padding: 20px;
-    text-align: center; /* Center text within content */
+    text-align: left; /* Align text to the left */
+}
+
+.tab-content h2 {
+    color: #333; /* Dark grey color */
+    font-weight: bold; /* Bold for titles */
+}
+
+.tab-content p {
+    color: #666; /* Lighter grey for content */
+    font-size: 1.1em; /* Slightly larger font size */
+    line-height: 1.6; /* Increased line height for better readability */
 }
 
 @media screen and (max-width: 768px) {
     .navbar {
-        position: static; /* Let navbar flow in document */
+        position: static;
+    }
+
+    .navbar a {
+        float: none;
+    }
+
+    .sidebar, .main-content {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .sidebar {
-        width: 100%;
-        height: auto;
         position: relative;
         top: 0;
         left: 0;
-    }
-
-    .main-content {
-        margin: 0;
-        padding-top: 20px;
-    }
-
-    .cv-link {
-        margin-left: 0;
-        margin-right: 0;
     }
 }
