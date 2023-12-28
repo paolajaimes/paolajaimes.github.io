@@ -6,23 +6,27 @@ body, html {
 }
 
 .navbar {
-    background-color: #f9f9f9; /* Very light grey */
+    background-color: #f9f9f9;
     overflow: hidden;
     position: fixed;
     width: 100%;
     top: 0;
-    border-bottom: 1px solid #eaeaea; /* Slightly darker line for division */
+    border-bottom: 1px solid #eaeaea;
     z-index: 1000;
+    padding: 14px 0;
 }
 
 .nav-link {
-    margin-right: 2cm; /* Space between navbar items */
+    margin-right: 1cm;
     font-size: 1.2em;
-    float: right; /* Align to the right */
+    float: right;
+    color: #808080;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.navbar a:hover {
-    background-color: #ddd;
+.nav-link:hover {
+    text-decoration: none;
 }
 
 .sidebar {
@@ -30,7 +34,7 @@ body, html {
     width: 250px;
     position: fixed;
     top: 60px;
-    left: 2cm;
+    left: 0;
     height: calc(100% - 60px);
     overflow: auto;
     padding-top: 20px;
@@ -41,40 +45,57 @@ body, html {
     width: 180px;
     height: 180px;
     object-fit: cover;
-    margin: 20px auto;
+    margin: 0 auto;
+    display: block;
 }
 
 .profile h1, .profile p, .profile a {
-    color: #333; /* Dark grey color */
+    color: #333;
     text-align: center;
 }
 
 .profile a {
-    color: #333; /* Dark grey color for links */
+    color: #333;
     text-decoration: none;
 }
 
 .main-content {
     margin-left: 250px;
     padding-top: 60px;
-    padding-left: 2cm; /* Space from the sidebar */
-    padding-right: 2cm; /* Space from the right edge */
+    padding-left: 2cm;
+    padding-right: 2cm;
 }
 
 .tab-content {
     display: none;
-    text-align: left; /* Align text to the left */
+    text-align: left;
 }
 
 .tab-content h2 {
-    color: #333; /* Dark grey color */
-    font-weight: bold; /* Bold for titles */
+    color: #333;
+    font-weight: bold;
 }
 
 .tab-content p {
-    color: #666; /* Lighter grey for content */
-    font-size: 1.1em; /* Slightly larger font size */
-    line-height: 1.6; /* Increased line height for better readability */
+    color: #666;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #f9f9f9;
+    color: #808080;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #eaeaea;
+    font-size: 0.8em;
+}
+
+.main-content {
+    padding-bottom: 50px;
 }
 
 @media screen and (max-width: 768px) {
@@ -97,5 +118,9 @@ body, html {
         position: relative;
         top: 0;
         left: 0;
+    }
+
+    footer {
+        position: relative;
     }
 }
