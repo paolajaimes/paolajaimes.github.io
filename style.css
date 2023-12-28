@@ -1,102 +1,84 @@
-body {
+body, html {
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
-header {
-    background-color: #F5F5F5;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 30px;
-    align-items: center;
-}
-
-.name {
-    color: #A8A8A8;
-    font-size: 1.5em;
-    margin-right: 100px; /* Adjust as per your spacing requirement */
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 4em; /* Adjust the space between menu items */
-}
-
-nav ul li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #DDD;
-}
-
-.profile {
-    float: left;
-    width: 200px;
+.sidebar {
+    background-color: #f5f5f5;
     padding: 20px;
-    background-color: #fff; /* To visually separate the profile section from the content */
-    height: 100vh; /* Full height */
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Adding a subtle shadow to the profile section */
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
 }
 
-.profile img.profile-picture {
+.profile-picture {
     border-radius: 50%;
-    width: 100%;
-    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #333;
 }
 
-.profile p, .profile a {
+.sidebar h1, .sidebar p {
     margin: 10px 0;
-    display: flex;
-    align-items: center;
-    color: black;
 }
 
-.profile a {
+.sidebar a {
+    text-decoration: none;
     color: #0077B5;
 }
 
-.profile i {
+.navbar {
+    margin-left: 250px; /* Same as sidebar width */
+    background-color: #eaeaea;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+}
+
+.content {
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 20px;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+/* Style the icons with Font Awesome */
+.fas, .fab {
     margin-right: 10px;
 }
 
-main {
-    margin-left: 220px; /* Same as the profile width plus its padding */
-    padding: 1em;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
 @media screen and (max-width: 768px) {
-    .profile {
+    .sidebar {
+        width: 100%;
         height: auto;
         position: relative;
-        width: 100%;
-        box-shadow: none;
     }
-    main {
+    .navbar {
+        margin-left: 0;
+    }
+    .content {
         margin-left: 0;
     }
 }
+
 
