@@ -8,31 +8,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
-    <div class="sidebar">
-        <img src="your-profile-picture.jpg" alt="Paola Jaimes" class="profile-picture">
-        <h1>Paola Jaimes</h1>
-        <p>Ph.D. Candidate in Economics, University of Ottawa</p>
-        <p><i class="fas fa-map-marker-alt"></i> Ottawa, ON</p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:paola.jaimes@uottawa.ca">paola.jaimes@uottawa.ca</a></p>
-        <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/paola-jaimes-santamar%C3%ADa-uottawa/" class="linkedin">LinkedIn</a></p>
+    <div class="navbar">
+        <a href="#about">Paola Jaimes</a>
+        <a href="#research">Research</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#cv">CV</a>
     </div>
     <div class="content">
-        <div class="navbar">
-            <a href="#research">Research</a>
-            <a href="#teaching">Teaching</a>
-            <a href="#cv">CV</a>
+        <div id="about" class="tab-content">
+            <img src="your-profile-picture.jpg" alt="Paola Jaimes" class="profile-picture">
+            <h1>Paola Jaimes</h1>
+            <p>Ph.D. Candidate in Economics, University of Ottawa</p>
+            <!-- Add your introduction content here -->
         </div>
         <div id="research" class="tab-content">
-            <h2>Research</h2>
-            <p>Content for Research...</p>
+            <!-- Content for Research -->
         </div>
         <div id="teaching" class="tab-content">
-            <h2>Teaching</h2>
-            <p>Content for Teaching...</p>
+            <!-- Content for Teaching -->
         </div>
         <div id="cv" class="tab-content">
-            <h2>CV</h2>
-            <p>CV - Please <a href="your-cv-link.pdf" target="_blank">click here</a> for my CV.</p>
+            <!-- Content for CV -->
         </div>
     </div>
     <script>
@@ -44,9 +40,11 @@
                 document.querySelector(this.getAttribute('href')).style.display = 'block';
             });
         });
-        // Simulate click on Research to show it by default
+        // Simulate click on About to show it by default
         document.querySelector('.navbar a').click();
     </script>
 </body>
+</html>
+
 </html>
 
