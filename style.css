@@ -2,13 +2,21 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #fff; /* Set the background to white */
+    background-color: #fff;
 }
 
 .navbar {
-    background-color: #eaeaea; /* Light grey background */
+    background-color: #eaeaea;
     overflow: hidden;
-    padding-left: 2cm; /* Space from the left edge */
+    position: fixed; /* Keep navbar at the top */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure navbar stays on top of other content */
+}
+
+.name-link {
+    margin-left: 2cm; /* Space for Paola Jaimes from the left */
+    font-size: 1.4em;
 }
 
 .navbar a {
@@ -16,15 +24,15 @@ body, html {
     display: block;
     color: black;
     text-align: center;
-    padding: 14px 20px;
+    padding: 14px 16px;
     text-decoration: none;
     transition: 0.3s;
-    font-size: 1.1em; /* Bigger font size for navigation */
+    font-size: 1.2em;
 }
 
-.navbar a:first-child {
-    font-size: 1.3em; /* Your name is a bit bigger */
-    margin-right: 1cm; /* More space after your name */
+.cv-link {
+    margin-left: auto; /* Push CV to the right */
+    margin-right: 2cm; /* Space from the right edge */
 }
 
 .navbar a:hover {
@@ -32,55 +40,54 @@ body, html {
 }
 
 .sidebar {
-    background-color: #fff; /* White background for the sidebar */
-    width: 250px; /* Sidebar width */
+    background-color: #fff;
+    width: 250px; /* Adjust width as necessary */
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
+    top: 60px; /* Adjust so it doesn't overlap with the navbar */
+    left: 2cm; /* Space from the left edge */
+    height: calc(100% - 60px); /* Subtract the navbar height */
     overflow: auto;
-    padding-top: 60px; /* Space from the top */
-}
-
-.profile {
-    text-align: center;
 }
 
 .profile img {
     border-radius: 50%;
-    width: 150px; /* Size of the profile picture */
-    height: 150px;
+    width: 180px; /* Larger profile picture */
+    height: 180px;
     object-fit: cover;
-    margin-bottom: 10px;
+    margin: 20px auto; /* Centered in the sidebar */
 }
 
 .main-content {
     margin-left: 250px; /* Same as sidebar width */
-    padding: 20px;
+    padding-top: 60px; /* Push content down below the navbar */
 }
 
 .tab-content {
     display: none;
     padding: 20px;
-    margin-top: 20px; /* Space from the navbar */
-}
-
-/* Style the icons with Font Awesome */
-.fas, .fab {
-    margin-right: 5px;
+    text-align: center; /* Center text within content */
 }
 
 @media screen and (max-width: 768px) {
     .navbar {
-        padding-left: 0; /* Remove padding on smaller screens */
-    }
-
-    .sidebar, .main-content {
-        width: 100%;
-        margin-left: 0;
+        position: static; /* Let navbar flow in document */
     }
 
     .sidebar {
-        padding-top: 0;
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .main-content {
+        margin: 0;
+        padding-top: 20px;
+    }
+
+    .cv-link {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
