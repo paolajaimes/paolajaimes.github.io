@@ -9,21 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
-    <div class="navbar" id="myNavbar">
+    <div class="navbar">
         <a href="#about" class="nav-link">About</a>
         <a href="#research" class="nav-link">Research</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-        <div class="dropdown">
-            <button class="dropbtn">More
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#teaching" class="nav-link">Teaching</a>
-                <a href="#cv" class="nav-link">CV</a>
-            </div>
-        </div>
+        <a href="#teaching" class="nav-link">Teaching</a>
+        <a href="#cv" class="nav-link">CV</a>
     </div>
     <div class="sidebar">
         <div class="profile">
@@ -85,67 +75,24 @@
 <!-- End of Footer -->
 
 <script>
-    // JavaScript for handling the navbar dropdown and tab switching with smooth scrolling
-    function myFunction() {
-        var x = document.getElementById("myNavbar");
-        if (x.className === "navbar") {
-            x.className += " responsive";
-        } else {
-            x.className = "navbar";
-        }
-    }
-
+    // JavaScript for handling the tab switching with smooth scrolling
     document.querySelectorAll('.navbar a').forEach(link => {
         link.addEventListener('click', function(e) {
-            var dropdown = this.parentNode;
-            // Check if the clicked link is part of the dropdown menu
-            if (dropdown.classList.contains('dropdown') || dropdown.classList.contains('dropdown-content')) {
-                // If it is, we need to toggle the dropdown
-                if (dropdown.classList.contains('dropdown-content')) {
-                    dropdown = dropdown.parentNode;
-                }
-                dropdown.classList.toggle('show');
-            } else {
-                // Handle normal link behavior
-                e.preventDefault();
-                const targetSection = document.querySelector(this.getAttribute('href'));
-                // Smooth scrolling to the top of the target section
-                window.scrollTo({
-                    top: targetSection.offsetTop - document.querySelector('.navbar').offsetHeight,
-                    behavior: 'smooth'
-                });
-                // Hide all tab content
-                document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
-                // Show the targeted section's content
-                targetSection.style.display = 'block';
-                
-                // Close the dropdown when clicking a link
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
+            e.preventDefault();
+            const targetSection = document.querySelector(this.getAttribute('href'));
+            // Smooth scrolling to the top of the target section
+            window.scrollTo({
+                top: targetSection.offsetTop - document.querySelector('.navbar').offsetHeight,
+                behavior: 'smooth'
+            });
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
+            // Show the targeted section's content
+            targetSection.style.display = 'block';
         });
     });
-
-    // Click on About to show it by default
+    // Simulate click on About to show it by default
     document.querySelector('.navbar a').click();
-
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            for (var i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-        }
-    }
 </script>
 </body>
 </html>
