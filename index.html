@@ -90,10 +90,7 @@
             e.preventDefault();
             const targetSection = document.querySelector(this.getAttribute('href'));
             // Smooth scrolling to the top of the target section
-            window.scrollTo({
-                top: targetSection.offsetTop - document.querySelector('.navbar').offsetHeight,
-                behavior: 'smooth'
-            });
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             // Hide all tab content
             document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
             // Show the targeted section's content
