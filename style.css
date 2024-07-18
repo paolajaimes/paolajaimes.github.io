@@ -168,24 +168,23 @@ footer {
         position: static;
     }
 
-    .navbar a {
-        float: none;
-    }
+.navbar a {
+    float: none;
+}
 
-    .sidebar, .main-content {
-        width: 100%;
-        margin-left: 0;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+.sidebar, .main-content {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
-    .sidebar {
-        position: relative;
-        top: 0;
-        left: 0;
-    }
+.sidebar {
+    position: relative;
+    top: 0;
+    left: 0;
+}
 
-    footer {
-        position: relative;
-    }
+footer {
+    position: relative;
 }
