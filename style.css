@@ -1,3 +1,12 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box;
+}
+
 /* Navbar */
 .navbar {
     background-color: #f9f9f9;
@@ -9,12 +18,12 @@
     z-index: 1000;
     padding: 14px 0;
     display: flex;
-    justify-content: space-between; /* Change this to space-between for mobile */
+    justify-content: space-between;
     align-items: center;
 }
 
 .menu-toggle {
-    display: none; /* Hide the toggle button by default */
+    display: none;
     font-size: 1.5em;
     cursor: pointer;
     margin-left: 20px;
@@ -45,7 +54,7 @@
     }
     
     .menu {
-        display: none; /* Hide the menu by default on mobile */
+        display: none;
         flex-direction: column;
         width: 100%;
         text-align: center;
@@ -54,12 +63,12 @@
     .nav-link {
         margin: 10px 0;
         font-size: 1.2em;
-        padding: 10px 0; /* Add padding to space out menu items */
-        border-bottom: 1px solid #eaeaea; /* Add a border to separate items */
+        padding: 10px 0;
+        border-bottom: 1px solid #eaeaea;
     }
     
     .menu-toggle {
-        display: block; /* Show the toggle button on mobile */
+        display: block;
     }
 }
 
@@ -118,7 +127,7 @@
 
 .tab-content {
     display: none;
-    padding-top: 60px; /* Adjust this value if needed */
+    padding-top: 60px;
 }
 
 .tab-content h2 {
