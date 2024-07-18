@@ -54,7 +54,7 @@ body, html {
     }
     
     .menu {
-        display: none;
+        display: none; /* Hide the menu by default on mobile */
         flex-direction: column;
         width: 100%;
         text-align: center;
@@ -63,12 +63,12 @@ body, html {
     .nav-link {
         margin: 10px 0;
         font-size: 1.2em;
-        padding: 10px 0;
-        border-bottom: 1px solid #eaeaea;
+        padding: 10px 0; /* Add padding to space out menu items */
+        border-bottom: 1px solid #eaeaea; /* Add a border to separate items */
     }
     
     .menu-toggle {
-        display: block;
+        display: block; /* Show the toggle button on mobile */
     }
 }
 
