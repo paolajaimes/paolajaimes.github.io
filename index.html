@@ -84,32 +84,28 @@
         </footer>
     </div>
 
-    <script>
-        // JavaScript for handling the tab switching with smooth scrolling
-        document.querySelectorAll('.navbar a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                if (this.getAttribute('href').startsWith('#')) {
-                    e.preventDefault();
-                    const targetSection = document.querySelector(this.getAttribute('href'));
-                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
-                    targetSection.style.display = 'block';
-                }
-            });
-        });
-
-        // Simulate click on About to show it by default
-        document.querySelector('.navbar a[href="#about"]').click();
-
-        // JavaScript for handling the mobile menu toggle
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            const menu = document.getElementById('menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
+<script>
+    // JavaScript for handling the tab switching with smooth scrolling
+    document.querySelectorAll('.navbar a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (this.getAttribute('href').startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(this.getAttribute('href'));
+                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
+                targetSection.style.display = 'block';
             }
         });
-    </script>
+    });
+
+    // Simulate click on About to show it by default
+    document.querySelector('.navbar a[href="#about"]').click();
+
+    // JavaScript for handling the mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('active');
+    });
+</script>
 </body>
 </html>
