@@ -76,9 +76,12 @@
                     document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
                     targetSection.style.display = 'block';
 
-                    // Hide sidebar on mobile
-                    if (window.innerWidth <= 768) {
-                        document.getElementById('sidebar').style.display = 'none';
+                    // Hide sidebar on Research and Teaching sections
+                    const sidebar = document.getElementById('sidebar');
+                    if (this.getAttribute('href') === '#research' || this.getAttribute('href') === '#teaching') {
+                        sidebar.style.display = 'none';
+                    } else {
+                        sidebar.style.display = 'block';
                     }
 
                     // Close the menu after click on mobile
