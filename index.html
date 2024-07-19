@@ -30,14 +30,14 @@
         </div>
     </div>
     <div class="main-content">
-     <!-- About Me Section -->
+        <!-- About Me Section -->
         <div id="about" class="tab-content">
             <h2>About Me</h2>
             <p>Hello! I’m Paola Jaimes Santamaria, a Ph.D. candidate in Economics at the University of Ottawa, expecting to graduate in September 2024. Throughout my academic journey, I’ve conducted research in development economics, the economics of conflict, and natural resources. My work has examined the impact of financial aid programs on crime and the social effects of extractive industries in developing countries. This research has provided me with a deep understanding of the dynamics of resource distribution and its influence on conflict, offering valuable insights into economic and social challenges.</p>
 
             <p>Due to my research experience, I have developed advanced skills in data analysis, applied econometrics, and spatial data analysis using tools like Stata, R, and Python. I am also experienced in policy analysis and impact evaluation, which I am eager to apply to real-world problems and contribute to effective policy-making.</p>
-<p>In addition to my research, I have extensive teaching experience. I’ve been a teaching assistant for both graduate and undergraduate courses in economics, and I recently taught “Introduction to Development Economics” at the University of Ottawa. I’ve also led short technical courses for second-year PhD students, which has further enhanced my communication and instructional skills.</p>
-     <p>I’m bilingual in Spanish and English, and I’m actively seeking research positions that focus on policy and program evaluation. I am excited about opportunities that allow me to make a tangible impact through insightful research and analysis.</p>
+            <p>In addition to my research, I have extensive teaching experience. I’ve been a teaching assistant for both graduate and undergraduate courses in economics, and I recently taught “Introduction to Development Economics” at the University of Ottawa. I’ve also led short technical courses for second-year PhD students, which has further enhanced my communication and instructional skills.</p>
+            <p>I’m bilingual in Spanish and English, and I’m actively seeking research positions that focus on policy and program evaluation. I am excited about opportunities that allow me to make a tangible impact through insightful research and analysis.</p>
 
             <p>Let’s connect and collaborate on projects that drive meaningful change in the fields of economics and policy-making!</p>
 
@@ -73,39 +73,39 @@
         <!-- Teaching Section -->
         <div id="teaching" class="tab-content">
           <h2>Teaching</h2>
-   <p>In the Winter 2024 term, I taught "Introduction to Development Economics" at the University of Ottawa. My teaching journey also includes conducting short courses for second-year PhD students at the Ottawa-Carleton Graduate School of Economics (OCGSE). I taught LaTeX workshops in the springs of 2022 and 2023, where I created two practical templates using Overleaf - an <a href="https://www.overleaf.com/read/pqtnkngyypmm#434cf8" target="_blank">Article Example</a> and a <a href="https://www.overleaf.com/read/tcdfpycfhksp#6b261b" target="_blank">Beamer Presentation Example</a> - to assist students in mastering typesetting for academic research. In the spring of 2024, I developed and taught a 6-hour introductory Stata course. All the materials used for the Stata workshop can be found in the following <a href="https://github.com/paolajaimes/intro-stata-econ/tree/main" target="_blank">GitHub repository</a>.</p>
+            <p>In the Winter 2024 term, I taught "Introduction to Development Economics" at the University of Ottawa. My teaching journey also includes conducting short courses for second-year PhD students at the Ottawa-Carleton Graduate School of Economics (OCGSE). I taught LaTeX workshops in the springs of 2022 and 2023, where I created two practical templates using Overleaf - an <a href="https://www.overleaf.com/read/pqtnkngyypmm#434cf8" target="_blank">Article Example</a> and a <a href="https://www.overleaf.com/read/tcdfpycfhksp#6b261b" target="_blank">Beamer Presentation Example</a> - to assist students in mastering typesetting for academic research. In the spring of 2024, I developed and taught a 6-hour introductory Stata course. All the materials used for the Stata workshop can be found in the following <a href="https://github.com/paolajaimes/intro-stata-econ/tree/main" target="_blank">GitHub repository</a>.</p>
 
-<p>Additionally, I have served as a Teaching Assistant for multiple courses, emphasizing graduate-level subjects like Economics of Natural Resources and Advanced Microeconomic Theory, along with undergraduate courses such as Introduction to Environmental and Natural Resources Economics, Probability and Statistics, and Financial Econometrics. These experiences have allowed me to support students in navigating complex topics and developing valuable academic skills.</p>
-</div>
-    <!-- End of Teaching Section -->
+            <p>Additionally, I have served as a Teaching Assistant for multiple courses, emphasizing graduate-level subjects like Economics of Natural Resources and Advanced Microeconomic Theory, along with undergraduate courses such as Introduction to Environmental and Natural Resources Economics, Probability and Statistics, and Financial Econometrics. These experiences have allowed me to support students in navigating complex topics and developing valuable academic skills.</p>
+        </div>
+        <!-- End of Teaching Section -->
 
         <footer>
             <p>&copy; 2024 Paola Jaimes. Ph.D. Candidate in Economics at the University of Ottawa.</p>
         </footer>
     </div>
 
-<script>
-    // JavaScript for handling the tab switching with smooth scrolling
-    document.querySelectorAll('.navbar a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            if (this.getAttribute('href').startsWith('#')) {
-                e.preventDefault();
-                const targetSection = document.querySelector(this.getAttribute('href'));
-                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
-                targetSection.style.display = 'block';
-            }
+    <script>
+        // JavaScript for handling the tab switching with smooth scrolling
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const targetSection = document.querySelector(this.getAttribute('href'));
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.querySelectorAll('.tab-content').forEach(tab => tab.style.display = 'none');
+                    targetSection.style.display = 'block';
+                }
+            });
         });
-    });
 
-    // Simulate click on About to show it by default
-    document.querySelector('.navbar a[href="#about"]').click();
+        // Simulate click on About to show it by default
+        document.querySelector('.navbar a[href="#about"]').click();
 
-    // JavaScript for handling the mobile menu toggle
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-        const menu = document.getElementById('menu');
-        menu.classList.toggle('active');
-    });
-</script>
+        // JavaScript for handling the mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
